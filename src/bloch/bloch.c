@@ -326,7 +326,7 @@ for (tcount = 0; tcount < ntime; tcount++)
 	rotz = -(*xgrad++ * gammadx + *ygrad++ * gammady + *zgrad++ * gammadz +
 								df*TWOPI ) * *tsteps;
 	rotx = (- *b1real++ * GAMMA * *tsteps);
-	roty = (+ *b1imag++ * GAMMA * *tsteps++);
+	roty = (- *b1imag++ * GAMMA * *tsteps++);
 	calcrotmat(rotx, roty, rotz, rotmat);
 
 	if (mode == 1)
